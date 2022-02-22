@@ -121,6 +121,7 @@ body {
 /* --- HEADER --- */
 
 header {
+	width: 100%;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -130,7 +131,7 @@ header {
 nav {
 	margin: 1rem;
 	display: flex;
-	justify-content: space-around;
+	justify-content: flex-end;
 	align-items: center;
 }
 
