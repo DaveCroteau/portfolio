@@ -364,15 +364,21 @@ nav li.active {
 
 .project-card {
 	background: white;
-	max-width: 80%;
+	width: 65%;
 	margin: auto;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	grid-auto-rows: minmax(475px, 1fr);
+	grid-auto-rows: minmax(400px, 1fr);
 	border-radius: 15px;
 	box-shadow: var(--box-shadow2);
 	overflow: hidden;
 	margin-bottom: var(--spacer-size);
+}
+
+@media (max-width: 1080px) {
+	.project-card {
+		width: 100%;
+	}
 }
 
 .text-cell {
@@ -424,7 +430,7 @@ nav li.active {
 	order: 1;
 }
 
-@media (max-width: 655px) {
+@media (max-width: 555px) {
 	.project-card .text-cell {
 		order: 2;
 		padding: 0.5rem;
@@ -444,16 +450,23 @@ nav li.active {
 
 .form-container {
 	background: #fff;
-	max-width: 60%;
+	width: 45%;
 	margin: 0 auto 3rem;
 	border-radius: 15px;
 	box-shadow: var(--box-shadow2);
 	padding: 2rem;
 }
 
+@media (max-width: 900px) {
+	.form-container {
+		width: 65%;
+	}
+}
+
 @media (max-width: 600px) {
 	.form-container {
 		padding: 2rem 0.8rem;
+		width: 100%;
 	}
 }
 
@@ -494,6 +507,13 @@ nav li.active {
 	font-family: inherit;
 }
 
+.form-footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
 #submit {
 	cursor: pointer;
 }
@@ -501,27 +521,22 @@ nav li.active {
 #contact-form .outer-btn {
 	text-align: right;
 	padding-right: 0;
+	flex: 1;
 }
 
 .form-confirmation {
 	padding: 0.5rem 1rem;
-	margin-top: 1rem;
-	min-width: 20rem;
+	margin: 1rem 0;
+	flex: 4;
+	min-width: 16rem;
 	text-align: center;
 	border-radius: 5px;
 	color: var(--light2);
-	opacity: 0.8;
 	display: none;
-	position: fixed;
-	top: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 1;
-	background-color: blue;
 }
 
 .form-success {
-	background: var(--green);
+	background: lightgreen;
 	display: inline-block;
 }
 
@@ -575,14 +590,6 @@ footer .container {
 @media (max-width: 1367px) {
 	.container {
 		width: 100%;
-	}
-
-	.project-card {
-		max-width: 100%;
-	}
-
-	.form-container {
-		max-width: 100%;
 	}
 }
 
@@ -667,8 +674,16 @@ footer .container {
 	opacity: 1;
 }
 
+.active.fade-in {
+	animation: fade-in 1s ease;
+}
+
 .active.pop-top {
 	animation: pop-top 5s linear;
+}
+
+.active.pop-bottom {
+	animation: pop-bottom 5s linear;
 }
 
 .active.fade-bottom {
@@ -698,6 +713,25 @@ footer .container {
 	}
 	100% {
 		transform: translateY(-150px) translateX(-50%);
+		opacity: 0;
+	}
+}
+
+@keyframes pop-bottom {
+	0% {
+		transform: translateY(150px) translateX(-50%);
+		opacity: 0;
+	}
+	15% {
+		transform: translateY(0) translateX(-50%);
+		opacity: 0.8;
+	}
+	85% {
+		transform: translateY(0) translateX(-50%);
+		opacity: 0.8;
+	}
+	100% {
+		transform: translateY(150px) translateX(-50%);
 		opacity: 0;
 	}
 }

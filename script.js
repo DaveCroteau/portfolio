@@ -105,7 +105,7 @@ document.querySelector('#submit').addEventListener('click', e => {
 		.then(() => {
 			form.reset()
 			confirm.classList.add('form-success', 'active')
-			confirm.textContent = 'Merci !'
+			confirm.textContent = 'Message envoyé'
 			setTimeout(() => {
 				confirm.classList.remove('form-success', 'active')
 				confirm.textContent = ''
