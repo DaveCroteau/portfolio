@@ -4,4 +4,4 @@ Je suis un développeur web situé dans la région de Montréal. Je suis à la r
 
 ## Voir live
 
-[Dave Croteau Portfolio](https://davecroteauportfolio.netlify.app/)
+[Dave Croteau Portfolio](https://davecroteau.dev)
