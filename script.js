@@ -128,3 +128,5 @@ document.querySelector('#email').addEventListener('blur', e => {
 		e.target.classList.add('field-error')
 	}
 })
+
+document.querySelector('.copy').textContent = `\u00A9 ${new Date().getFullYear()} - tous droits révervés`
